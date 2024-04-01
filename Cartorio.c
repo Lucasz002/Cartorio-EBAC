@@ -123,7 +123,8 @@ int main() //Mostra as opcões que o usuário vai ter em sua tela
 		printf("Escolha a opcão desejada do menu:\n\n");
 		printf("\t1 - Registrar nomes\n");//opcões que o usuário vai ter em sua tela
 		printf("\t2 - Consultar nomes\n");//opcões que o usuário vai ter em sua tela
-		printf("\t3 - Deletar nomes\n\n");//opcões que o usuário vai ter em sua tela
+		printf("\t3 - Deletar nomes\n");//opcões que o usuário vai ter em sua tela
+		printf("\t4 - Sair do sistema\n\n");//opcões que o usuário vai ter em sua tela
 		printf("Opcão: "); //Fim do menu
 	
 		scanf("%d", &opcao); //Armazenando a escolha do usuário
@@ -141,6 +142,11 @@ int main() //Mostra as opcões que o usuário vai ter em sua tela
 				break;
 			case 3:
 				deletar();
+				break;
+				
+			case 4:
+				printf("Obrigado por utilizar o sistema!\n");
+				return 0;
 				break;
 			
 			default:
