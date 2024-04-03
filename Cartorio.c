@@ -109,30 +109,43 @@ int deletar()
 
 int main() //Mostra as opcões que o usuário vai ter em sua tela
 {
+	setlocale (LC_ALL, "Portuguese");
+	
 	int opcao=0; //Definindo variáveis
 	int x=1;//Variável para não fechar o programa automaticamente
+	char senhadigitada[10]="a";
+	int comparacao;
+	
+	printf("### Cartório da EBAC ###\n\n");
+	printf("Login de administrador!\n\nDigite a sua senha: ");
+	scanf("%s", senhadigitada);
+	
+	comparacao = strcmp(senhadigitada, "admin");
+	
+	if(comparacao == 0){
+	
 	
 	for(x=1;x=1;)
 	{
 	
-		system("cls");
+			system("cls");
 	
-		setlocale(LC_ALL, "Portuguese"); //Região feita para suportar os assentos do Brasil
+			setlocale(LC_ALL, "Portuguese"); //Região feita para suportar os assentos do Brasil
 	
-		printf("### Cartório da EBAC ###\n\n");
-		printf("Escolha a opcão desejada do menu:\n\n");
-		printf("\t1 - Registrar nomes\n");//opcões que o usuário vai ter em sua tela
-		printf("\t2 - Consultar nomes\n");//opcões que o usuário vai ter em sua tela
-		printf("\t3 - Deletar nomes\n");//opcões que o usuário vai ter em sua tela
-		printf("\t4 - Sair do sistema\n\n");//opcões que o usuário vai ter em sua tela
-		printf("Opcão: "); //Fim do menu
+			printf("### Cartório da EBAC ###\n\n");
+			printf("Escolha a opcão desejada do menu:\n\n");
+			printf("\t1 - Registrar nomes\n");//opcões que o usuário vai ter em sua tela
+			printf("\t2 - Consultar nomes\n");//opcões que o usuário vai ter em sua tela
+			printf("\t3 - Deletar nomes\n");//opcões que o usuário vai ter em sua tela
+			printf("\t4 - Sair do sistema\n\n");//opcões que o usuário vai ter em sua tela
+			printf("Opcão: "); //Fim do menu
 	
-		scanf("%d", &opcao); //Armazenando a escolha do usuário
+			scanf("%d", &opcao); //Armazenando a escolha do usuário
 	
-		system("cls"); 
+			system("cls"); 
 	
-		switch(opcao)//SwitchCase foi usado para melhorar a performace do código
-		{
+			switch(opcao)//SwitchCase foi usado para melhorar a performace do código
+			{
 			case 1:
 				registro();
 				break;
@@ -153,7 +166,12 @@ int main() //Mostra as opcões que o usuário vai ter em sua tela
 				printf("Essa opcão não existe!\n");
 				system("pause");
 				break;
-		}//Fim do SwitchCase
-	
+			}//Fim do SwitchCase
+		}
 	}
+	else
+		printf("\nSenha incorreta!");
 }
+
+
+	
